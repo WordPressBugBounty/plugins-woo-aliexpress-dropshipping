@@ -4,7 +4,7 @@ Contributors: wooproductimporter
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags:AliExpress,Temu, eBay, Etsy, Amazon, woocommerce, dropshipping
-Tested up to: 6.6.2
+Tested up to: 6.7.1
 Stable tag: 2.1.3
 
 SharkDropship is a comprehensive dropshipping and affiliate plugin for AliExpress,Temu, eBay, Amazon, Etsy to woocommerce, 
