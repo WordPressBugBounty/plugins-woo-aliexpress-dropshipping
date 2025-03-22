@@ -23,6 +23,15 @@ Import products effortlessly with a single click and begin selling them on your 
 [Website](https://SharkDropship.com/wooshark-dropshipping) | [Pro Version](https://sharkdropship.com/wooshark-dropshipping) | [Chrome Extension](https://chrome.google.com/webstore/detail/wooshark-for-aliexpresseb/ajbncoijgeclkangiahiphilnolbdmmh)
 
 
+
+
+how the chrome extension work ? 
+
+[youtube https://youtu.be/gj6mOgYDOVU]
+[youtube https://youtu.be/ME8pdW11A0A]
+[youtube https://youtu.be/2OilxBjZdSg]
+
+
 == Features for eBay Integration  to woocommerce==
 
 Our plugin enhances your eCommerce capabilities with a comprehensive suite of features specifically designed for eBay integration:
@@ -201,15 +210,6 @@ Enhance your store's efficiency with our plugin's robust product update and mana
 
 
 
-
-
-
-
-
-
-how the chrome extension work ? 
-
-[youtube https://www.youtube.com/watch?v=EYluHMUQB8g]
 
 
 
