@@ -1,0 +1,2286 @@
+/**
+ * Admin CSS for Sharkdropship for Amazon and WooCommerce
+ * WordPress Admin Standards Compliant
+ *
+ * @package Sharkdropship_Amazon_WooCommerce
+ */
+
+/* ===== SHARKDROPSHIP MENU ICON STYLING ===== */
+#adminmenu .toplevel_page_multisupplier-sharkdropship .wp-menu-image::before {
+    content: "\f174"; /* dashicons-cart */
+    font-family: dashicons;
+    font-size: 20px;
+    line-height: 1;
+    color: #a0a5aa;
+    transition: color 0.2s ease;
+}
+
+#adminmenu .toplevel_page_multisupplier-sharkdropship:hover .wp-menu-image::before,
+#adminmenu .toplevel_page_multisupplier-sharkdropship.current .wp-menu-image::before {
+    color: #00a32a;
+}
+
+/* ===== ENHANCED WORDPRESS ADMIN STYLING ===== */
+
+/* Chrome Extension Notice Styling */
+.multisupplier-extension-notice {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 50%, #ff9ff3 100%);
+    border-radius: 16px;
+    margin: 20px 0;
+    padding: 0;
+    box-shadow: 0 12px 40px rgba(255, 107, 107, 0.3);
+    border: 3px solid #ffffff;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 12px 40px rgba(255, 107, 107, 0.3);
+    }
+    100% {
+        box-shadow: 0 12px 40px rgba(255, 107, 107, 0.5), 0 0 20px rgba(255, 107, 107, 0.3);
+    }
+}
+
+.multisupplier-extension-notice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.multisupplier-extension-notice .notice-header {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.multisupplier-extension-notice .notice-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ff4757;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+}
+
+.multisupplier-extension-notice .notice-badge .dashicons {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+.multisupplier-extension-notice .notice-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.multisupplier-extension-notice .notice-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.multisupplier-extension-notice .notice-icon {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.multisupplier-extension-notice .notice-icon .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: #ffffff;
+}
+
+.multisupplier-extension-notice .notice-text {
+    flex: 1;
+    color: #ffffff;
+}
+
+.multisupplier-extension-notice .notice-text h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.multisupplier-extension-notice .notice-text h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.multisupplier-extension-notice .notice-benefits {
+    margin: 0 0 20px 0;
+}
+
+.multisupplier-extension-notice .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.multisupplier-extension-notice .benefit-item .dashicons {
+    color: #2ed573;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.multisupplier-extension-notice .notice-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.multisupplier-extension-notice .notice-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.multisupplier-extension-notice .notice-actions .button-primary {
+    background: #2ed573;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(46, 213, 115, 0.3);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.multisupplier-extension-notice .notice-actions .button-primary:hover {
+    background: #26d0aa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(46, 213, 115, 0.4);
+}
+
+.multisupplier-extension-notice .notice-actions .button-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.multisupplier-extension-notice .notice-actions .button-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.multisupplier-extension-notice .notice-dismiss {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.multisupplier-extension-notice .notice-dismiss:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.multisupplier-extension-notice .notice-dismiss .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Metrics Dashboard Styling */
+.multisupplier-metrics-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.metric-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.metric-icon {
+    background: linear-gradient(135deg, #0073aa, #005a87);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.metric-icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.metric-content {
+    flex: 1;
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #23282d;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Stats section styling */
+.multisupplier-sharkdropship-stats {
+    background: #fff;
+    border-left: 4px solid #0073aa;
+    padding: 12px 16px;
+    margin: 20px 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.multisupplier-sharkdropship-stats p {
+    margin: 0;
+    color: #23282d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Enhanced table styling */
+.wp-list-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.wp-list-table .column-title {
+    width: 35%;
+}
+
+.wp-list-table .column-status {
+    width: 12%;
+}
+
+.wp-list-table .column-views {
+    width: 12%;
+}
+
+.wp-list-table .column-sales {
+    width: 16%;
+}
+
+.wp-list-table .column-actions {
+    width: 25%;
+}
+
+/* Ensure consistent table structure */
+.wp-list-table thead th,
+.wp-list-table tbody td {
+    vertical-align: top;
+    padding: 8px 10px;
+}
+
+.wp-list-table tbody td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Product title styling */
+.wp-list-table .column-title .row-title {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wp-list-table .column-title .row-title:hover {
+    color: #005a87;
+}
+
+.wp-list-table .row-actions {
+    color: #666;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.wp-list-table .row-actions span {
+    margin-right: 8px;
+}
+
+/* Status column styling */
+.wp-list-table .column-status .post-state {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Status-specific colors */
+.wp-list-table .column-status .post-state {
+    background: #f1f1f1;
+    color: #666;
+}
+
+/* Views count styling */
+.wp-list-table .column-views .views-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    color: #0073aa;
+    font-size: 14px;
+}
+
+.wp-list-table .column-views .views-count::before {
+    content: '👁';
+    font-size: 12px;
+}
+
+/* Sales column styling */
+.wp-list-table .column-sales .sales-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.wp-list-table .column-sales .sales-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    color: #28a745;
+    font-size: 14px;
+}
+
+.wp-list-table .column-sales .sales-count::before {
+    content: '🛒';
+    font-size: 12px;
+}
+
+.wp-list-table .column-sales .sales-revenue {
+    color: #666;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.wp-list-table .column-sales .sales-revenue small {
+    color: #28a745;
+    font-weight: 600;
+}
+
+/* Action buttons styling */
+.wp-list-table .column-actions .button {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    padding: 4px 8px;
+    height: auto;
+    line-height: 1.4;
+}
+
+.wp-list-table .column-actions .button .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* Button color variations - using class-based approach for better browser compatibility */
+.wp-list-table .column-actions .button-amazon {
+    background: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+.wp-list-table .column-actions .button-amazon:hover {
+    background: #c82333;
+    border-color: #bd2130;
+    color: #fff;
+}
+
+.wp-list-table .column-actions .button-edit {
+    background: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.wp-list-table .column-actions .button-edit:hover {
+    background: #218838;
+    border-color: #1e7e34;
+    color: #fff;
+}
+
+.wp-list-table .column-actions .button-preview {
+    background: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+}
+
+.wp-list-table .column-actions .button-preview:hover {
+    background: #138496;
+    border-color: #117a8b;
+    color: #fff;
+}
+
+.wp-list-table .column-actions .button-supplier {
+    background: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.wp-list-table .column-actions .button-supplier:hover {
+    background: #218838;
+    border-color: #1e7e34;
+    color: #fff;
+}
+
+/* Enhanced tablenav styling */
+.tablenav.top {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccd0d4;
+}
+
+.tablenav.bottom {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #ccd0d4;
+}
+
+/* Filter controls styling */
+.tablenav .alignleft.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tablenav .alignleft.actions input[type="text"] {
+    border: 1px solid #8c8f94;
+    border-radius: 3px;
+    padding: 6px 8px;
+    font-size: 13px;
+}
+
+.tablenav .alignleft.actions input[type="text"]:focus {
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+    outline: 2px solid transparent;
+}
+
+.tablenav .alignleft.actions select {
+    border: 1px solid #8c8f94;
+    border-radius: 3px;
+    padding: 6px 8px;
+    font-size: 13px;
+    min-width: 120px;
+}
+
+.tablenav .alignleft.actions select:focus {
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+    outline: 2px solid transparent;
+}
+
+.tablenav .alignleft.actions .button {
+    padding: 6px 12px;
+    font-size: 13px;
+    height: auto;
+    line-height: 1.4;
+}
+
+/* Enhanced pagination */
+.tablenav-pages {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tablenav-pages .page-numbers {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 2px;
+    border: 1px solid #ccd0d4;
+    background: #fff;
+    color: #0073aa;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.tablenav-pages .page-numbers:hover {
+    background: #f6f7f7;
+    border-color: #0073aa;
+    color: #005a87;
+}
+
+.tablenav-pages .page-numbers.current {
+    background: #0073aa;
+    border-color: #0073aa;
+    color: #fff;
+}
+
+.tablenav-pages .page-numbers.dots {
+    border: none;
+    background: none;
+    color: #666;
+    padding: 6px 8px;
+}
+
+.tablenav-pages .page-numbers.dots:hover {
+    background: none;
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 782px) {
+    .multisupplier-extension-notice .notice-header h2 {
+        font-size: 20px;
+    }
+    
+    .multisupplier-extension-notice .notice-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .multisupplier-extension-notice .notice-benefits {
+        text-align: left;
+    }
+    
+    .multisupplier-extension-notice .notice-actions {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .multisupplier-extension-notice .notice-actions .button-primary {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .multisupplier-extension-notice .notice-dismiss {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .multisupplier-metrics-dashboard {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .metric-card {
+        padding: 15px;
+    }
+    
+    .metric-value {
+        font-size: 20px;
+    }
+    
+    .tablenav .alignleft.actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .tablenav .alignleft.actions input[type="text"],
+    .tablenav .alignleft.actions select {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .wp-list-table .column-actions .button {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .wp-list-table .column-title,
+    .wp-list-table .column-status,
+    .wp-list-table .column-views,
+    .wp-list-table .column-sales,
+    .wp-list-table .column-actions {
+        width: auto;
+    }
+}
+
+/* Loading state */
+.wp-list-table .loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Error state */
+.wp-list-table .error {
+    text-align: center;
+    padding: 40px 20px;
+    color: #dc3545;
+    font-style: italic;
+}
+
+/* Hover effects for table rows */
+.wp-list-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.wp-list-table tbody tr:hover .row-title {
+    color: #005a87;
+}
+
+/* Focus states for accessibility */
+.wp-list-table .button:focus,
+.tablenav input:focus,
+.tablenav select:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .tablenav,
+    .wp-list-table .column-actions {
+        display: none;
+    }
+    
+    .wp-list-table {
+        border: 1px solid #000;
+    }
+    
+    .wp-list-table th,
+    .wp-list-table td {
+        border: 1px solid #000;
+        padding: 8px;
+    }
+}
+
+/* ===== GLOBAL STYLES ===== */
+.multisupplier-sharkdropship-plugin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+}
+
+.multisupplier-sharkdropship-plugin-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.multisupplier-sharkdropship-plugin-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.multisupplier-sharkdropship-plugin-header h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.multisupplier-sharkdropship-plugin-header .subtitle {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    margin-top: 8px;
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== FILTERS SECTION ===== */
+.multisupplier-filters-section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.multisupplier-filters-section .filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.multisupplier-filters-section .search-box {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.multisupplier-filters-section .search-box input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.multisupplier-filters-section .search-box input[type="text"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.multisupplier-filters-section .search-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #3b82f6;
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.multisupplier-filters-section .search-btn:hover {
+    background: #2563eb;
+}
+
+.multisupplier-filters-section .search-btn .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.multisupplier-filters-section .filter-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.multisupplier-filters-section .filter-controls select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #ffffff;
+    min-width: 120px;
+    transition: all 0.2s ease;
+}
+
+.multisupplier-filters-section .filter-controls select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.multisupplier-filters-section .filter-controls .button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.multisupplier-filters-section .filter-controls .button-primary {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.multisupplier-filters-section .filter-controls .button-primary:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: white;
+}
+
+.multisupplier-filters-section .filter-controls .button-secondary {
+    background: #f9fafb;
+    color: #374151;
+    border-color: #d1d5db;
+}
+
+.multisupplier-filters-section .filter-controls .button-secondary:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+    color: #111827;
+}
+
+/* ===== PRODUCTS TABLE ===== */
+.multisupplier-sharkdropship-plugin-table-container {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.wp-list-table {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.wp-list-table thead th {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border: none;
+    padding: 20px 16px;
+    font-weight: 700;
+    color: #2d3748;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    border-bottom: 2px solid #e2e8f0;
+    vertical-align: middle;
+}
+
+/* Column width definitions */
+.wp-list-table .column-product {
+    width: 25%;
+}
+
+.wp-list-table .column-supplier {
+    width: 10%;
+}
+
+.wp-list-table .column-price {
+    width: 10%;
+}
+
+.wp-list-table .column-views {
+    width: 10%;
+}
+
+.wp-list-table .column-sales {
+    width: 10%;
+}
+
+.wp-list-table .column-revenue {
+    width: 12%;
+}
+
+.wp-list-table .column-date {
+    width: 12%;
+}
+
+.wp-list-table .column-actions {
+    width: 9%;
+}
+
+.wp-list-table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f7fafc;
+}
+
+.wp-list-table tbody tr:hover {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    transform: translateX(4px) scale(1.01);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #667eea;
+}
+
+.wp-list-table tbody tr:hover .product-title {
+    color: #667eea;
+    transform: translateX(2px);
+}
+
+.wp-list-table tbody tr:hover .product-price {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    transform: scale(1.05);
+}
+
+.wp-list-table tbody tr:hover .views-count {
+    background: linear-gradient(135deg, #e6f3ff 0%, #dbeafe 100%);
+    transform: scale(1.05);
+}
+
+.wp-list-table tbody tr:hover .sales-count {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    transform: scale(1.05);
+}
+
+.wp-list-table tbody tr:hover .revenue-amount {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    transform: scale(1.05);
+}
+
+.wp-list-table tbody td {
+    padding: 20px 16px;
+    border: none;
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Product Info Styling */
+.wp-list-table .product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.wp-list-table .product-image {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+    background: #f7fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wp-list-table .product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wp-list-table tbody tr:hover .product-image::before {
+    opacity: 1;
+}
+
+.wp-list-table .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.wp-list-table tbody tr:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.wp-list-table .product-image .dashicons {
+    font-size: 24px;
+    color: #a0aec0;
+    width: 24px;
+    height: 24px;
+    transition: color 0.3s ease;
+}
+
+.wp-list-table tbody tr:hover .product-image .dashicons {
+    color: #667eea;
+}
+
+.wp-list-table .product-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.wp-list-table .product-title {
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    display: block;
+    text-decoration: none;
+}
+
+.wp-list-table .product-title:hover {
+    color: #667eea;
+}
+
+.wp-list-table .product-id {
+    color: #718096;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Price Styling */
+.wp-list-table .product-price {
+    font-weight: 700;
+    color: #2ed573;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%);
+    border-radius: 8px;
+    border: 1px solid #bbf7d0;
+}
+
+/* Supplier Badge Styling */
+.wp-list-table .supplier-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    min-width: 80px;
+    border: 2px solid;
+}
+
+.wp-list-table .supplier-badge.aliexpress {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: #fff;
+    border-color: #ff6b35;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+.wp-list-table .supplier-badge.ebay {
+    background: linear-gradient(135deg, #86bc25 0%, #6b8e23 100%);
+    color: #fff;
+    border-color: #86bc25;
+    box-shadow: 0 2px 8px rgba(134, 188, 37, 0.3);
+}
+
+.wp-list-table .supplier-badge.amazon {
+    background: linear-gradient(135deg, #ff9900 0%, #ff8c00 100%);
+    color: #fff;
+    border-color: #ff9900;
+    box-shadow: 0 2px 8px rgba(255, 153, 0, 0.3);
+}
+
+.wp-list-table .supplier-badge.etsy {
+    background: linear-gradient(135deg, #f56400 0%, #d35400 100%);
+    color: #fff;
+    border-color: #f56400;
+    box-shadow: 0 2px 8px rgba(245, 100, 0, 0.3);
+}
+
+.wp-list-table .supplier-badge.temu {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: #fff;
+    border-color: #ff6b6b;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+.wp-list-table .supplier-badge.unknown {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: #fff;
+    border-color: #6c757d;
+    box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+}
+
+/* Views Count Styling */
+.wp-list-table .views-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: #667eea;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6f3ff 100%);
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    min-width: 60px;
+    justify-content: center;
+}
+
+.wp-list-table .views-count::before {
+    content: '👁';
+    font-size: 0.9rem;
+}
+
+/* Sales Count Styling */
+.wp-list-table .sales-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: #f59e0b;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-radius: 10px;
+    border: 1px solid #fde68a;
+    min-width: 60px;
+    justify-content: center;
+}
+
+.wp-list-table .sales-count::before {
+    content: '🛒';
+    font-size: 0.9rem;
+}
+
+/* Revenue Styling */
+.wp-list-table .revenue-amount {
+    font-weight: 700;
+    color: #059669;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border-radius: 8px;
+    border: 1px solid #a7f3d0;
+}
+
+/* Date Styling */
+.wp-list-table .date-added {
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 8px 12px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Action Buttons Styling */
+.wp-list-table .action-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wp-list-table .action-buttons .button {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    min-width: 80px;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.wp-list-table .action-buttons .button:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wp-list-table .action-buttons .button-edit {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(78, 205, 196, 0.3);
+}
+
+.wp-list-table .action-buttons .button-edit:hover {
+    background: linear-gradient(135deg, #26d0ce 0%, #1a9aa8 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+}
+
+.wp-list-table .action-buttons .button-view {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.wp-list-table .action-buttons .button-view:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.wp-list-table .action-buttons .button-delete {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+.wp-list-table .action-buttons .button-delete:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #e53e3e 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.wp-list-table .action-buttons .button .dashicons {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+/* Delete confirmation modal */
+.delete-confirmation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.delete-confirmation-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.delete-confirmation-content {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.delete-confirmation-modal.show .delete-confirmation-content {
+    transform: scale(1);
+}
+
+.delete-confirmation-icon {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.delete-confirmation-icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+}
+
+.delete-confirmation-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.delete-confirmation-message {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.delete-confirmation-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.delete-confirmation-actions .button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.delete-confirmation-actions .button-cancel {
+    background: #f7fafc;
+    color: #4a5568;
+    border: 2px solid #e2e8f0;
+}
+
+.delete-confirmation-actions .button-cancel:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+    color: #2d3748;
+}
+
+.delete-confirmation-actions .button-confirm {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+.delete-confirmation-actions .button-confirm:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #e53e3e 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Loading and Error States */
+.wp-list-table .loading,
+.wp-list-table .error {
+    text-align: center;
+    padding: 60px 20px;
+    color: #718096;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.wp-list-table .loading {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.wp-list-table .error {
+    color: #e53e3e;
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+}
+
+/* No products state */
+.wp-list-table .no-products {
+    text-align: center;
+    padding: 60px 20px;
+    color: #718096;
+    font-style: italic;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* ===== PAGINATION ===== */
+.tablenav-pages {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.tablenav-pages .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    margin: 0 4px;
+    border: 2px solid #e2e8f0;
+    background: #ffffff;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 40px;
+    height: 40px;
+}
+
+.tablenav-pages .page-numbers:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.tablenav-pages .page-numbers.current {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.tablenav-pages .page-numbers.dots {
+    border: none;
+    background: none;
+    color: #a0aec0;
+    box-shadow: none;
+    min-width: auto;
+    padding: 10px 8px;
+}
+
+.tablenav-pages .page-numbers.dots:hover {
+    background: none;
+    border: none;
+    color: #718096;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .multisupplier-sharkdropship-plugin-container {
+        padding: 15px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-header {
+        padding: 25px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-header h1 {
+        font-size: 2rem;
+    }
+    
+    .multisupplier-filters-section .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .multisupplier-filters-section .search-box {
+        min-width: auto;
+    }
+    
+    .multisupplier-filters-section .filter-controls {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .multisupplier-filters-section .filter-controls select,
+    .multisupplier-filters-section .filter-controls .button {
+        width: 100%;
+    }
+    
+    .wp-list-table .action-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .wp-list-table .action-buttons .button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .multisupplier-sharkdropship-plugin-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters {
+        padding: 20px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .filter-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .search-input-wrapper input[type="text"] {
+        padding: 14px 16px;
+        padding-right: 45px;
+        font-size: 14px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .filter-group select {
+        padding: 12px 16px;
+        padding-right: 40px;
+        font-size: 14px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .button {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .active-filter-tags {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .filter-tag {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .wp-list-table thead th,
+    .wp-list-table tbody td {
+        padding: 15px 12px;
+    }
+    
+    .wp-list-table .product-title {
+        font-size: 1rem;
+    }
+    
+    .wp-list-table .views-count,
+    .wp-list-table .sales-count {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+    
+    /* Stack table on mobile */
+    .wp-list-table,
+    .wp-list-table thead,
+    .wp-list-table tbody,
+    .wp-list-table th,
+    .wp-list-table td,
+    .wp-list-table tr {
+        display: block;
+    }
+    
+    .wp-list-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .wp-list-table tr {
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .wp-list-table td {
+        border: none;
+        position: relative;
+        padding: 12px 15px;
+        padding-left: 50%;
+        text-align: left;
+    }
+    
+    .wp-list-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 700;
+        color: #4a5568;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .wp-list-table .column-product {
+        width: 100%;
+        padding-left: 15px;
+    }
+    
+    .wp-list-table .column-product:before {
+        display: none;
+    }
+    
+    .wp-list-table .product-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .wp-list-table .product-image {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    
+    .wp-list-table .action-buttons {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .wp-list-table .action-buttons .button {
+        width: auto;
+        min-width: 100px;
+    }
+    
+    .delete-confirmation-content {
+        margin: 20px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .multisupplier-sharkdropship-plugin-container {
+        padding: 10px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-header {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .multisupplier-sharkdropship-plugin-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .wp-list-table td {
+        padding: 10px 12px;
+        padding-left: 45%;
+        font-size: 0.9rem;
+    }
+    
+    .wp-list-table td:before {
+        left: 12px;
+        width: 40%;
+        font-size: 0.75rem;
+    }
+    
+    .wp-list-table .product-info {
+        gap: 8px;
+    }
+    
+    .wp-list-table .product-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .wp-list-table .action-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .wp-list-table .action-buttons .button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .delete-confirmation-content {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .delete-confirmation-title {
+        font-size: 1.3rem;
+    }
+    
+    .delete-confirmation-message {
+        font-size: 0.9rem;
+    }
+    
+    .delete-confirmation-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .delete-confirmation-actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+    .multisupplier-sharkdropship-plugin-container {
+        background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters {
+        background: #2d3748;
+        border-color: #4a5568;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .filter-group label {
+        color: #e2e8f0;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .filter-group input[type="text"],
+    .multisupplier-sharkdropship-plugin-filters .filter-group select {
+        background: #4a5568;
+        border-color: #718096;
+        color: #e2e8f0;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .filter-group input[type="text"]:focus,
+    .multisupplier-sharkdropship-plugin-filters .filter-group select:focus {
+        border-color: #667eea;
+        background: #4a5568;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .button-secondary {
+        background: #4a5568;
+        color: #e2e8f0;
+        border-color: #718096;
+    }
+    
+    .multisupplier-sharkdropship-plugin-filters .button-secondary:hover {
+        background: #718096;
+        border-color: #a0aec0;
+        color: #ffffff;
+    }
+    
+    .multisupplier-sharkdropship-plugin-table-container {
+        background: #2d3748;
+        border-color: #4a5568;
+    }
+    
+    .wp-list-table thead th {
+        background: linear-gradient(135deg, #4a5568 0%, #718096 100%);
+        color: #e2e8f0;
+        border-bottom-color: #718096;
+    }
+    
+    .wp-list-table tbody tr {
+        border-bottom-color: #4a5568;
+    }
+    
+    .wp-list-table tbody tr:hover {
+        background: linear-gradient(135deg, #4a5568 0%, #718096 100%);
+    }
+    
+    .wp-list-table .product-title {
+        color: #e2e8f0;
+    }
+    
+    .wp-list-table .product-meta {
+        color: #a0aec0;
+    }
+    
+    .wp-list-table .product-meta small {
+        background: #4a5568;
+        border-color: #718096;
+        color: #a0aec0;
+    }
+    
+    .wp-list-table .views-count {
+        background: linear-gradient(135deg, #4a5568 0%, #718096 100%);
+        border-color: #718096;
+        color: #667eea;
+    }
+    
+    .tablenav-pages {
+        background: #2d3748;
+        border-top-color: #4a5568;
+    }
+    
+    .tablenav-pages .page-numbers {
+        background: #4a5568;
+        border-color: #718096;
+        color: #e2e8f0;
+    }
+    
+    .tablenav-pages .page-numbers:hover {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.multisupplier-sharkdropship-plugin-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.wp-list-table tbody tr {
+    animation: slideInRight 0.4s ease-out;
+    animation-fill-mode: both;
+}
+
+.wp-list-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.wp-list-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.wp-list-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.wp-list-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+.wp-list-table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+
+/* Enhanced hover effects */
+.wp-list-table tbody tr:hover {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    transform: translateX(4px) scale(1.01);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #667eea;
+}
+
+.wp-list-table tbody tr:hover .product-title {
+    color: #667eea;
+    transform: translateX(2px);
+}
+
+.wp-list-table tbody tr:hover .product-price {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    transform: scale(1.05);
+}
+
+.wp-list-table tbody tr:hover .views-count {
+    background: linear-gradient(135deg, #e6f3ff 0%, #dbeafe 100%);
+    transform: scale(1.05);
+}
+
+.wp-list-table tbody tr:hover .sales-count {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    transform: scale(1.05);
+}
+
+.wp-list-table tbody tr:hover .revenue-amount {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    transform: scale(1.05);
+}
+
+/* Smooth transitions for all elements */
+.wp-list-table *,
+.delete-confirmation-modal * {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loading animation for delete button */
+.button-delete.loading {
+    animation: pulse 1s infinite;
+    pointer-events: none;
+}
+
+/* Success animation for deleted rows */
+.wp-list-table tbody tr.deleting {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(-100px) scale(0.9);
+    }
+}
+
+/* Enhanced focus states for accessibility */
+.wp-list-table .button:focus,
+.delete-confirmation-modal .button:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+/* Improved table header styling */
+.wp-list-table thead th {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border: none;
+    padding: 20px 16px;
+    font-weight: 700;
+    color: #2d3748;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    border-bottom: 2px solid #e2e8f0;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+}
+
+.wp-list-table thead th::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.wp-list-table thead th:hover::before {
+    left: 100%;
+}
+
+/* Enhanced product image styling */
+.wp-list-table .product-image {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+    background: #f7fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wp-list-table .product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wp-list-table tbody tr:hover .product-image::before {
+    opacity: 1;
+}
+
+.wp-list-table .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.wp-list-table tbody tr:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.wp-list-table .product-image .dashicons {
+    font-size: 24px;
+    color: #a0aec0;
+    width: 24px;
+    height: 24px;
+    transition: color 0.3s ease;
+}
+
+.wp-list-table tbody tr:hover .product-image .dashicons {
+    color: #667eea;
+}
+
+/* ===== NO PRODUCTS STATE STYLING ===== */
+.no-products-state {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    margin: 20px 0;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.no-products-state::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain2" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain2)"/></svg>');
+    opacity: 0.3;
+}
+
+.no-products-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.no-products-icon {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.no-products-icon .dashicons {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    color: #ffffff;
+}
+
+.no-products-text h2 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.no-products-text > p {
+    margin: 0 0 30px 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.no-products-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    background: #2ed573;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(46, 213, 115, 0.3);
+}
+
+.step-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.step-content p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+.no-products-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.no-products-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.no-products-actions .button-primary {
+    background: #2ed573;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(46, 213, 115, 0.3);
+}
+
+.no-products-actions .button-primary:hover {
+    background: #26d0a8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 213, 115, 0.4);
+}
+
+.no-products-actions .button-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.no-products-actions .button-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.no-products-actions .button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive design for no-products state */
+@media (max-width: 768px) {
+    .no-products-state {
+        padding: 30px 20px;
+        margin: 15px 0;
+    }
+    
+    .no-products-text h2 {
+        font-size: 24px;
+    }
+    
+    .no-products-text > p {
+        font-size: 14px;
+    }
+    
+    .step-item {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .step-content h4 {
+        font-size: 15px;
+    }
+    
+    .step-content p {
+        font-size: 13px;
+    }
+    
+    .no-products-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .no-products-actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+} 
