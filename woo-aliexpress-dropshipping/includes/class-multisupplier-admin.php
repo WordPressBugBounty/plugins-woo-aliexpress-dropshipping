@@ -179,7 +179,7 @@ class Sharkdropship_Multisupplier_Admin {
                             </div>
                         </div>
                         <div class="notice-actions">
-                            <a href="https://chromewebstore.google.com/detail/sharkdropship-affiliate-f/lkdfdaconeeookejekfehcafogmbmcck?hl=en" target="_blank" class="button button-primary button-large" id="download-extension">
+                            <a href="https://chromewebstore.google.com/detail/sharkdropship-for-temu-al/ajbncoijgeclkangiahiphilnolbdmmh?hl=en" target="_blank" class="button button-primary button-large" id="download-extension">
                                 <span class="dashicons dashicons-download"></span>
                                 <?php esc_html_e( '📥 Install Chrome Extension Now', 'sharkdropship-multisupplier' ); ?>
                             </a>
@@ -338,7 +338,7 @@ class Sharkdropship_Multisupplier_Admin {
                         <p style="margin-bottom: 24px; color: #555;">
                             <?php esc_html_e( 'You have not imported any products from AliExpress, eBay, Amazon, Etsy or Temu yet. To get started, install the Sharkdropship Chrome extension and import your first product!', 'sharkdropship-multisupplier' ); ?>
                         </p>
-                        <a href="https://chromewebstore.google.com/detail/sharkdropship-affiliate-f/lkdfdaconeeookejekfehcafogmbmcck?hl=en" target="_blank" class="button button-primary button-large" style="font-size: 16px; padding: 10px 32px;">
+                        <a href="https://chromewebstore.google.com/detail/sharkdropship-for-temu-al/ajbncoijgeclkangiahiphilnolbdmmh?hl=en" target="_blank" class="button button-primary button-large" style="font-size: 16px; padding: 10px 32px;">
                             <?php esc_html_e( 'Get Chrome Extension', 'sharkdropship-multisupplier' ); ?>
                         </a>
                     </div>

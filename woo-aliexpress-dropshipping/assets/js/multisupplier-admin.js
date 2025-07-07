@@ -30,13 +30,13 @@
         $('#download-extension').on('click', function(e) {
             e.preventDefault();
             // Open the actual Chrome Web Store extension page
-            window.open('https://chromewebstore.google.com/detail/sharkdropship-affiliate-f/lkdfdaconeeookejekfehcafogmbmcck?hl=en', '_blank');
+            window.open('https://chromewebstore.google.com/detail/sharkdropship-for-temu-al/ajbncoijgeclkangiahiphilnolbdmmh?hl=en', '_blank');
         });
         
         $('#download-extension-no-products').on('click', function(e) {
             e.preventDefault();
             // Open the actual Chrome Web Store extension page
-            window.open('https://chromewebstore.google.com/detail/sharkdropship-affiliate-f/lkdfdaconeeookejekfehcafogmbmcck?hl=en', '_blank');
+            window.open('https://chromewebstore.google.com/detail/sharkdropship-for-temu-al/ajbncoijgeclkangiahiphilnolbdmmh?hl=en', '_blank');
         });
         
         $('#watch-install-video-no-products').on('click', function(e) {
